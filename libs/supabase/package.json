@@ -1,0 +1,38 @@
+{
+  "name": "@cage-clash/supabase",
+  "version": "1.0.0",
+  "description": "cage-clash wrapper for supabase apis",
+  "main": "index.js",
+  "author": "Kieran Davis",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.2",
+    "cross-env": "^7.0.3"
+  },
+  "scripts": {
+    "lint": "eslint . --cache --fix --ext .ts",
+    "test": "jest",
+    "genTS": "npx supabase gen types typescript --linked > src/db.types.ts",
+    "genMigration": "npx supabase migration new",
+    "push": "npx supabase db push",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.6",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.0.2",
+    "prettier": "3.0.3",
+    "supabase": "^1.106.1",
+    "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write --ignore-unknown",
+      "eslint . --cache --fix"
+    ]
+  }
+}

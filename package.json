@@ -1,0 +1,21 @@
+{
+  "name": "cage-clash",
+  "version": "1.0.0",
+  "description": "An fantasy app for Mixed-Martial Arts",
+  "author": "Kieran Davis",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*",
+    "native-libs/*"
+  ],
+  "devDependencies": {
+    "husky": "^8.0.0"
+  },
+  "scripts": {
+    "postinstall": "husky install",
+    "w": "yarn workspace",
+    "precommit": "yarn workspaces precommit"
+  }
+}

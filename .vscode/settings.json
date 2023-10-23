@@ -1,0 +1,9 @@
+{
+  "workbench.editor.showTabs": true,
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.formatOnSave": true
+}
